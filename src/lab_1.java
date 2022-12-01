@@ -6,20 +6,21 @@ import static java.lang.Math.abs;
 public class lab_1 {
     static double lagrang() {
         long start = System.currentTimeMillis();
-        double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.9, 1.8, 2.0};
-        double[] F = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6, 6858, 7.389};
+        double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
+        double[] F = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите x");
         double x = sc.nextDouble();
         double L = 0.0;
-        double temp = 0.0;
+        double temp = 1.0;
 
-        for (int i = 0; i < xi.length; ++i) {
-            for (int j = 0; j < xi.length; ++j) {
+        for (int i = 0; i < xi.length; i++) {
+            for (int j = 0; j < xi.length; j++) {
                 if (i != j) temp *= (x - xi[j]) / (xi[i] - xi[j]);
             }
             L += F[i] * temp;
-            temp = 1;
+            System.out.println(L);
+            temp = 1.0;
         }
         long finish = System.currentTimeMillis();
         long elapsed = finish - start;
@@ -28,8 +29,8 @@ public class lab_1 {
     }
 
     static double aitken() {
-        double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.6, 1.7, 1.9, 1.8, 2.0};
-        double[] fi = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 7.389};
+        double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
+        double[] fi = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
         double[] abss = new double[fi.length];
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите x");
@@ -58,8 +59,7 @@ public class lab_1 {
             k = i;
             for (int j = 0; j < Lii.get(i).size() - 1; j++) {
                 k++;
-                double n = (Lii.get(i).get(j + 1) * (x - xi[j]) - Lii.get(i).get(j) * (x - xi[k])) / (xi[k] - xi[j]);
-                F.add(n);
+                F.add((Lii.get(i).get(j + 1) * (x - xi[j]) - Lii.get(i).get(j) * (x - xi[k])) / (xi[k] - xi[j]));
             }
             if (F.isEmpty()) break;
             Lii.add(F);

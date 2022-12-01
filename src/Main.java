@@ -1,7 +1,5 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-
-import static java.lang.Math.abs;
+import java.security.Key;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +17,11 @@ public class Main {
                 }
                 break;
             case 5:
+                Map<String, List> temp = new HashMap<>();
+                temp = lab_5.trapez();
+                for (Map.Entry<String, List> pair : temp.entrySet()) {
+                    System.out.println(pair.getKey() + pair.getValue());
+                }
                 break;
         }
     }
