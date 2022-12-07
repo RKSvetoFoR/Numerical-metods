@@ -1,8 +1,6 @@
 package lab6;
 
 
-import org.jetbrains.annotations.Nullable;
-
 import static lab6.Lab_6_additionalValues.t;
 import static lab6.Lab_6_additionalValues.w;
 
@@ -19,9 +17,9 @@ public class Lab_6 {
         return Math.pow(x, 2) * Math.sin(1 / Math.pow(x, 2));
     }
 
-    public static @Nullable Object gauss1() {
-        int a = 1, b = 2, i = 0;
-        double integral = 0.0, diff = 0.0, i_n = 0, i_p = 0;
+    public static void gauss1() {
+        int a = 1, b = 2, i;
+        double integral = 0.0, diff, i_n, i_p = 0;
         for (i = 0; i < w().length; i++) {
             for (int j = 0; j < w()[i].length; j++) {
                 integral += w()[i][j] * f1(0.5 * (a + b + t()[i][j] * (b - a)));
@@ -37,15 +35,14 @@ public class Lab_6 {
                 i_p = i_n;
             }
         }
-        return null;
     }
 
-    public static @Nullable Object gauss2() {
+    public static void gauss2() {
         double integral = 0.0;
-        double diff = 0.0;
-        double i_n = 0;
+        double diff;
+        double i_n;
         double i_p = 0;
-        int i = 0;
+        int i;
         int a = 1;
         int b = 2;
         for (i = 0; i < w().length; i++) {
@@ -62,7 +59,6 @@ public class Lab_6 {
                 i_p = i_n;
             }
         }
-        return null;
     }
 }
 

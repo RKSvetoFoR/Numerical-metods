@@ -3,7 +3,7 @@ package lab3;
 import java.util.ArrayList;
 
 public class Lab_3 {
-    public static Object splines(){
+    public static void splines(){
         double x[] = {0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
         double y[] = {2, 2.105, 2.221, 2.349, 2.491, 2.648, 2.822, 3.013, 3.225, 3.459, 3.718};
         int N = 11;
@@ -69,6 +69,5 @@ public class Lab_3 {
         for (int i = 0; i < S.size(); i++) {
             System.out.print(S.get(i) + ",");
         }
-        return null;
     }
 }

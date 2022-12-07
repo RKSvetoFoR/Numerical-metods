@@ -5,47 +5,52 @@ import java.util.*;
 public class Lab_5 {
     static double scale1(int n, int a, int b) {
         double result;
-        result = (f1(a) + f1(b)) / 2;
+        result = f1(a) + f1(b);
         for (int i = 1; i < n; i++) {
-            result += f1(a + (double) ((b - a) / n) * i);
+            result += 2 * f1(a + ((double) (b - a) / n) * i);
         }
-        return result * (double) (b - a) / n;
+        result *= ((double) (b - a) / n) / 2;
+        return result;
     }
 
     static double scale2(int n, int a, int b) {
         double result;
-        result = (f2(b) + f2(a)) / 2;
+        result = f2(b) + f2(a);
         for (int i = 1; i < n; i++) {
-            result += f2(a + (double) ((b - a) / n) * i);
+            result += 2 * f2(a + ((double) (b - a) / n) * i);
         }
-        return result * (double) (b - a) / n;
+        result *= ((double) (b - a) / n) / 2;
+        return result;
     }
 
     static double scale3(int n, int a, int b) {
         double result;
-        result = (f3(b) + f3(a)) / 2;
+        result = f3(b) + f3(a);
         for (int i = 1; i < n; i++) {
-            result += f3(a + (double) ((b - a) / n) * i);
+            result += 2 * f3(a + ((double) (b - a) / n) * i);
         }
-        return result * (double) (b - a) / n;
+        result *= ((double) (b - a) / n) / 2;
+        return result;
     }
 
     static double scale4(int n, int a, int b) {
         double result;
-        result = (f4(b) + f4(a)) / 2;
+        result = f4(b) + f4(a);
         for (int i = 1; i < n; i++) {
-            result += f4(a + (double) ((b - a) / n) * i);
+            result += 2 * f4(a + ((double) (b - a) / n) * i);
         }
-        return result * (double) (b - a) / n;
+        result *= ((double) (b - a) / n) / 2;
+        return result;
     }
 
     static double scale5(int n, int a, int b) {
         double result;
-        result = (f5(b) + f5(a)) / 2;
+        result = f5(b) + f5(a);
         for (int i = 1; i < n; i++) {
-            result += f5(a + (double) ((b - a) / n) * i);
+            result += 2 * f5(a + ((double) (b - a) / n) * i);
         }
-        return result * (double) (b - a) / n;
+        result *= ((double) (b - a) / n) / 2;
+        return result;
     }
 
 
