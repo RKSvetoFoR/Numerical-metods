@@ -3,45 +3,45 @@ import java.util.*;
 
 public class lab_5 {
     static double scale1(int n, int a, int b) {
-        double result = 0;
-        result += (f1(b) - f1(a)) / 2;
-        for (int i = 0; i < n; i++) {
+        double result;
+        result = (f1(b) + f1(a)) / 2;
+        for (int i = 1; i < n; i++) {
             result += f1(a + ((b - a) / n) * i);
         }
         return result * (b - a) / n;
     }
 
     static double scale2(int n, int a, int b) {
-        double result = 0;
-        result += (f2(b) - f2(a)) / 2;
-        for (int i = 0; i < n; i++) {
+        double result;
+        result = (f2(b) + f2(a)) / 2;
+        for (int i = 1; i < n; i++) {
             result += f2(a + ((b - a) / n) * i);
         }
         return result * (b - a) / n;
     }
 
     static double scale3(int n, int a, int b) {
-        double result = 0;
-        result += (f3(b) - f3(a)) / 2;
-        for (int i = 0; i < n; i++) {
+        double result;
+        result = (f3(b) + f3(a)) / 2;
+        for (int i = 1; i < n; i++) {
             result += f3(a + ((b - a) / n) * i);
         }
         return result * (b - a) / n;
     }
 
     static double scale4(int n, int a, int b) {
-        double result = 0;
-        result += (f4(b) - f4(a)) / 2;
-        for (int i = 0; i < n; i++) {
+        double result;
+        result = (f4(b) + f4(a)) / 2;
+        for (int i = 1; i < n; i++) {
             result += f4(a + ((b - a) / n) * i);
         }
         return result * (b - a) / n;
     }
 
     static double scale5(int n, int a, int b) {
-        double result = 0;
-        result += (f5(b) - f5(a)) / 2;
-        for (int i = 0; i < n; i++) {
+        double result;
+        result = (f5(b) + f5(a)) / 2;
+        for (int i = 1; i < n; i++) {
             result += f5(a + ((b - a) / n) * i);
         }
         return result * (b - a) / n;
@@ -53,7 +53,7 @@ public class lab_5 {
     }
 
     static double f2(double x) {
-        return Math.log10(x) * Math.sin(1 / Math.pow(x, 3));
+        return Math.log(x) * Math.sin(1 / Math.pow(x, 3));
     }
 
     static double f3(double x) {
@@ -65,7 +65,7 @@ public class lab_5 {
     }
 
     static double f5(double x) {
-        return (Math.pow(3, x) / Math.pow(x, 2)) * Math.log10(Math.pow(x, 2));
+        return (Math.pow(3, x) / Math.pow(x, 2)) * Math.log(Math.pow(x, 2));
     }
 
     static @NotNull Map<String, List> trapez() {
