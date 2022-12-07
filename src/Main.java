@@ -29,6 +29,7 @@ public class Main {
                 for (int i = 0; i < temp3.size(); i++) {
                     System.out.print(temp3.get(i) + ",");
                 }
+                break;
             case 5:
                 Map<String, List> temp5 = new HashMap<>();
                 temp5 = lab_5.trapez();
