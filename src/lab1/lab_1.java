@@ -1,10 +1,12 @@
+package lab1;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.Math.abs;
 
 public class lab_1 {
-    static double lagrang() {
+    public static double lagrang() {
         long start = System.currentTimeMillis();
         double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
         double[] F = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
@@ -28,7 +30,7 @@ public class lab_1 {
         return L;
     }
 
-    static double aitken() {
+    public static double aitken() {
         double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
         double[] fi = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
         double[] abss = new double[fi.length];

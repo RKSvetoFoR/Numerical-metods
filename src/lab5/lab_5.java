@@ -1,3 +1,5 @@
+package lab5;
+
 import org.jetbrains.annotations.NotNull;
 import java.util.*;
 
@@ -68,7 +70,7 @@ public class lab_5 {
         return (Math.pow(3, x) / Math.pow(x, 2)) * Math.log(Math.pow(x, 2));
     }
 
-    static @NotNull Map<String, List> trapez() {
+    public static @NotNull Map<String, List> trapez() {
         Map<String, List> result = new HashMap<>();
         result.put("Sin(1/x^2)", lab_5_res.res1());
         result.put("Ln(x)*Sin(1/x^3)", lab_5_res.res2());

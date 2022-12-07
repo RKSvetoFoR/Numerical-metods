@@ -1,3 +1,6 @@
+package lab5;
+
+import lab5.lab_5;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
