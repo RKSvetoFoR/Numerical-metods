@@ -6,7 +6,7 @@ import java.util.Scanner;
 import static java.lang.Math.abs;
 
 public class lab_1 {
-    public static double lagrang() {
+    public static Object lagrang() {
         long start = System.currentTimeMillis();
         double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
         double[] F = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
@@ -21,16 +21,16 @@ public class lab_1 {
                 if (i != j) temp *= (x - xi[j]) / (xi[i] - xi[j]);
             }
             L += F[i] * temp;
-            System.out.println(L);
             temp = 1.0;
         }
         long finish = System.currentTimeMillis();
         long elapsed = finish - start;
         System.out.println("Прошло времени, мс: " + elapsed);
-        return L;
+        System.out.println(L);
+        return null;
     }
 
-    public static double aitken() {
+    public static Object aitken() {
         double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
         double[] fi = new double[]{2.7182, 3.0041, 3.3201, 3.6692, 4.0552, 4.4816, 4.953, 5.4739, 6.0496, 6.6858, 7.389};
         double[] abss = new double[fi.length];
@@ -105,7 +105,8 @@ public class lab_1 {
             result = Lii.get(s[0] + 1).get(0);
             System.out.println("Прошло времени, мс: " + elapsed);
         }
-        return result;
+        System.out.println(result);
+        return null;
     }
 
     public static void Qsort(double[] a, double[] b, double[] c, int q, int n) {

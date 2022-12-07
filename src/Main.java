@@ -1,7 +1,8 @@
 import lab2.Lab_2;
 import lab1.lab_1;
 import lab3.Lab_3;
-import lab5.lab_5;
+import lab5.Lab_5;
+import lab6.Lab_6;
 
 import java.util.*;
 
@@ -16,26 +17,23 @@ public class Main {
                 System.out.println("Если вы хотите использловать Интерполяционный многочлен Лагранжа нажмите 1,иначе нажмите 2");
                 int c = sc.nextInt();
                 if (c == 1) {
-                    System.out.println(lab_1.lagrang());
+                    lab_1.lagrang();
                 } else {
-                    System.out.println(lab_1.aitken());
+                    lab_1.aitken();
                 }
                 break;
             case 2:
                 Lab_2.print();
                 break;
             case 3:
-                ArrayList<Double> temp3 = Lab_3.splines();
-                for (int i = 0; i < temp3.size(); i++) {
-                    System.out.print(temp3.get(i) + ",");
-                }
+                Lab_3.splines();
                 break;
             case 5:
-                Map<String, List> temp5 = lab_5.trapez();
-                for (Map.Entry<String, List> pair : temp5.entrySet()) {
-                    System.out.println(pair.getKey() + pair.getValue());
-                }
+                Lab_5.trapez();
                 break;
+            case 6:
+                Lab_6.gauss1();
+                Lab_6.gauss2();
         }
     }
 }

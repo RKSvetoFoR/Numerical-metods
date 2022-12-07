@@ -1,12 +1,11 @@
 package lab5;
 
-import lab5.lab_5;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class lab_5_res {
+public class Lab_5_res {
     static @NotNull List<Double> res1() {
         List<Double> accuracy = new ArrayList<>();
         List<Double> value = new ArrayList<>();
@@ -19,8 +18,8 @@ public class lab_5_res {
         int b = 5;
         while (accuracy.get(i) > eps) {
             i++;
-            accuracy.add(1 / 3.0 * Math.abs(lab_5.scale1(2 * i, a, b) - lab_5.scale1(i, a, b)));
-            value.set(0, lab_5.scale1(i, a, b));
+            accuracy.add(1 / 3.0 * Math.abs(Lab_5.scale1(2 * i, a, b) - Lab_5.scale1(i, a, b)));
+            value.set(0, Lab_5.scale1(i, a, b));
             value.set(1, (double) i);
         }
         return value;
@@ -38,8 +37,8 @@ public class lab_5_res {
         int b = 4;
         while (accuracy.get(i) > eps) {
             i++;
-            accuracy.add(1 / 3.0 * Math.abs(lab_5.scale2(2 * i, a, b) - lab_5.scale2(i, a, b)));
-            value.set(0, lab_5.scale2(i, a, b));
+            accuracy.add(1 / 3.0 * Math.abs(Lab_5.scale2(2 * i, a, b) - Lab_5.scale2(i, a, b)));
+            value.set(0, Lab_5.scale2(i, a, b));
             value.set(1, (double) i);
         }
         return value;
@@ -57,8 +56,8 @@ public class lab_5_res {
         int b = 2;
         while (accuracy.get(i) > eps) {
             i++;
-            accuracy.add(1 / 3.0 * Math.abs(lab_5.scale3(2 * i, a, b) - lab_5.scale3(i, a, b)));
-            value.set(0, lab_5.scale3(i, a, b));
+            accuracy.add(1 / 3.0 * Math.abs(Lab_5.scale3(2 * i, a, b) - Lab_5.scale3(i, a, b)));
+            value.set(0, Lab_5.scale3(i, a, b));
             value.set(1, (double) i);
         }
         return value;
@@ -76,8 +75,8 @@ public class lab_5_res {
         int b = 3;
         while (accuracy.get(i) > eps) {
             i++;
-            accuracy.add(1 / 3.0 * Math.abs(lab_5.scale4(2 * i, a, b) - lab_5.scale4(i, a, b)));
-            value.set(0, lab_5.scale4(i, a, b));
+            accuracy.add(1 / 3.0 * Math.abs(Lab_5.scale4(2 * i, a, b) - Lab_5.scale4(i, a, b)));
+            value.set(0, Lab_5.scale4(i, a, b));
             value.set(1, (double) i);
         }
         return value;
@@ -95,8 +94,8 @@ public class lab_5_res {
         int b = 2;
         while (accuracy.get(i) > eps) {
             i++;
-            accuracy.add(1 / 3.0 * Math.abs(lab_5.scale5(2 * i, a, b) - lab_5.scale5(i, a, b)));
-            value.set(0, lab_5.scale5(i, a, b));
+            accuracy.add(1 / 3.0 * Math.abs(Lab_5.scale5(2 * i, a, b) - Lab_5.scale5(i, a, b)));
+            value.set(0, Lab_5.scale5(i, a, b));
             value.set(1, (double) i);
         }
         return value;
