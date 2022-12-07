@@ -5,6 +5,7 @@ import lab5.lab_5;
 
 import java.util.*;
 
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Введите номер лабораторной работы");
@@ -24,15 +25,13 @@ public class Main {
                 Lab_2.print();
                 break;
             case 3:
-                ArrayList<Double> temp3 = new ArrayList<>();
-                temp3 = Lab_3.splines();
+                ArrayList<Double> temp3 = Lab_3.splines();
                 for (int i = 0; i < temp3.size(); i++) {
                     System.out.print(temp3.get(i) + ",");
                 }
                 break;
             case 5:
-                Map<String, List> temp5 = new HashMap<>();
-                temp5 = lab_5.trapez();
+                Map<String, List> temp5 = lab_5.trapez();
                 for (Map.Entry<String, List> pair : temp5.entrySet()) {
                     System.out.println(pair.getKey() + pair.getValue());
                 }
