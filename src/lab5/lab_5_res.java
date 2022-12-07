@@ -12,7 +12,7 @@ public class lab_5_res {
         List<Double> value = new ArrayList<>();
         int i = 0;
         accuracy.add(1.0);
-        double eps = 1e-4;
+        double eps = 0.0001;
         value.add(0.0);
         value.add(0.0);
         int a = 3;
@@ -33,7 +33,7 @@ public class lab_5_res {
         accuracy.add(1.0);
         value.add(0.0);
         value.add(0.0);
-        double eps = 1e-4;
+        double eps = 0.0001;
         int a = 3;
         int b = 4;
         while (accuracy.get(i) > eps) {
@@ -52,7 +52,7 @@ public class lab_5_res {
         accuracy.add(1.0);
         value.add(0.0);
         value.add(0.0);
-        double eps = 1e-4;
+        double eps = 0.0001;
         int a = 1;
         int b = 2;
         while (accuracy.get(i) > eps) {
@@ -71,7 +71,7 @@ public class lab_5_res {
         accuracy.add(1.0);
         value.add(0.0);
         value.add(0.0);
-        double eps = 1e-4;
+        double eps = 0.0001;
         int a = 2;
         int b = 3;
         while (accuracy.get(i) > eps) {
@@ -88,7 +88,7 @@ public class lab_5_res {
         List<Double> value = new ArrayList<>();
         int i = 0;
         accuracy.add(1.0);
-        double eps = 1e-4;
+        double eps = 0.0001;
         value.add(0.0);
         value.add(0.0);
         int a = 1;

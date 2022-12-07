@@ -1,52 +1,53 @@
 package lab5;
 
 import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 
 public class lab_5 {
     static double scale1(int n, int a, int b) {
         double result;
-        result = (f1(b) + f1(a)) / 2;
+        result = (f1(a) + f1(b)) / 2;
         for (int i = 1; i < n; i++) {
-            result += f1(a + ((b - a) / n) * i);
+            result += f1(a + (double) ((b - a) / n) * i);
         }
-        return result * (b - a) / n;
+        return result * (double) (b - a) / n;
     }
 
     static double scale2(int n, int a, int b) {
         double result;
         result = (f2(b) + f2(a)) / 2;
         for (int i = 1; i < n; i++) {
-            result += f2(a + ((b - a) / n) * i);
+            result += f2(a + (double) ((b - a) / n) * i);
         }
-        return result * (b - a) / n;
+        return result * (double) (b - a) / n;
     }
 
     static double scale3(int n, int a, int b) {
         double result;
         result = (f3(b) + f3(a)) / 2;
         for (int i = 1; i < n; i++) {
-            result += f3(a + ((b - a) / n) * i);
+            result += f3(a + (double) ((b - a) / n) * i);
         }
-        return result * (b - a) / n;
+        return result * (double) (b - a) / n;
     }
 
     static double scale4(int n, int a, int b) {
         double result;
         result = (f4(b) + f4(a)) / 2;
         for (int i = 1; i < n; i++) {
-            result += f4(a + ((b - a) / n) * i);
+            result += f4(a + (double) ((b - a) / n) * i);
         }
-        return result * (b - a) / n;
+        return result * (double) (b - a) / n;
     }
 
     static double scale5(int n, int a, int b) {
         double result;
         result = (f5(b) + f5(a)) / 2;
         for (int i = 1; i < n; i++) {
-            result += f5(a + ((b - a) / n) * i);
+            result += f5(a + (double) ((b - a) / n) * i);
         }
-        return result * (b - a) / n;
+        return result * (double) (b - a) / n;
     }
 
 
