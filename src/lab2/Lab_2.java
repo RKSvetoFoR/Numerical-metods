@@ -13,18 +13,18 @@ public class Lab_2 {
 
         System.out.println("Test First Method Of Newton:");
         System.out.println(ordValues.get(1) + " = " + Lab_2_Interpolation.getResultOfNewtonFirstMethod(ordValues, absValues.getFirst(), absValues.get(1), shift));
-        System.out.println(ordValues.get(9) + " = " + Lab_2_Interpolation.getResultOfNewtonFirstMethod(ordValues, absValues.getFirst(), absValues.get(9), shift));
+        System.out.println(ordValues.get(8) + " = " + Lab_2_Interpolation.getResultOfNewtonFirstMethod(ordValues, absValues.getFirst(), absValues.get(8), shift));
 
         System.out.println();
 
         System.out.println("Test Second Method Of Newton:");
         System.out.println(ordValues.get(1) + " = " + Lab_2_Interpolation.getResultOfNewtonSecondMethod(ordValues, absValues.getLast(), absValues.get(1), shift));
-        System.out.println(ordValues.get(9) + " = " + Lab_2_Interpolation.getResultOfNewtonSecondMethod(ordValues, absValues.getLast(), absValues.get(9), shift));
+        System.out.println(ordValues.get(8) + " = " + Lab_2_Interpolation.getResultOfNewtonSecondMethod(ordValues, absValues.getLast(), absValues.get(8), shift));
 
         System.out.println();
 
         System.out.println("Test First Method Of Gauss:");
-        System.out.println(ordValues.get(6) + " = " + Lab_2_Interpolation.getResultOfGaussFirstMethod(ordValues, absValues.get(5), absValues.get(6), shift));
+        System.out.println(ordValues.get(5) + " = " + Lab_2_Interpolation.getResultOfGaussFirstMethod(ordValues, absValues.get(5), absValues.get(5), shift));
 
         System.out.println();
 
@@ -33,8 +33,8 @@ public class Lab_2 {
 
         System.out.println();
 
-        System.out.println("In point 0.1:");
-        double value = 0.9;
+        System.out.println("In point 0.453:");
+        double value = 0.453;
         System.out.println(Lab_2_Interpolation.getResultOfNewtonFirstMethod(ordValues, absValues.getFirst(), value, shift));
         System.out.println(Lab_2_Interpolation.getResultOfNewtonSecondMethod(ordValues, absValues.getLast(), value, shift));
         System.out.println(Lab_2_Interpolation.getResultOfGaussFirstMethod(ordValues, absValues.get(5), value, shift));
