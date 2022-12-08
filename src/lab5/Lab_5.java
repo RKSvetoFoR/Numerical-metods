@@ -74,7 +74,7 @@ public class Lab_5 {
         return (Math.pow(3, x) / Math.pow(x, 2)) * Math.log(Math.pow(x, 2));
     }
 
-    public static Object trapez() {
+    public static void trapez() {
         Map<String, List> result = new HashMap<>();
         result.put("Sin(1/x^2)", Lab_5_res.res1());
         result.put("Ln(x)*Sin(1/x^3)", Lab_5_res.res2());
@@ -84,7 +84,6 @@ public class Lab_5 {
         for (Map.Entry<String, List> pair : result.entrySet()) {
             System.out.println(pair.getKey() + pair.getValue());
         }
-        return null;
     }
 
 }
