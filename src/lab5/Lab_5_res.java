@@ -8,7 +8,7 @@ public class Lab_5_res {
     static  List<Double> res1() {
         List<Double> value = new ArrayList<>();
         int i = 0;
-        double eps = 0.00001;
+        double eps = 1e-3;
         value.add(0.0);
         value.add(0.0);
         double I = 1;
@@ -29,7 +29,7 @@ public class Lab_5_res {
         double I = 1;
         value.add(0.0);
         value.add(0.0);
-        double eps = 0.0001;
+        double eps =1e-3;
         int a = 3;
         int b = 4;
         while (I > eps) {
@@ -47,7 +47,7 @@ public class Lab_5_res {
         double I = 1;
         value.add(0.0);
         value.add(0.0);
-        double eps = 0.0001;
+        double eps = 1e-3;
         int a = 1;
         int b = 2;
         while (I > eps) {
@@ -65,7 +65,7 @@ public class Lab_5_res {
         double I = 1;
         value.add(0.0);
         value.add(0.0);
-        double eps = 0.0001;
+        double eps = 1e-3;
         int a = 2;
         int b = 3;
         while (I > eps) {
@@ -81,7 +81,7 @@ public class Lab_5_res {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double I = 1;
-        double eps = 0.0001;
+        double eps = 1e-3;
         value.add(0.0);
         value.add(0.0);
         int a = 1;

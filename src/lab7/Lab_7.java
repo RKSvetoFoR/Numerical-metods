@@ -30,9 +30,11 @@ public class Lab_7 {
         for (int i=0;i<integralRes.size();i++){
             System.out.println("f'"+(i+1)+" = "+ integralRes.get(i));
         }
+        System.out.println();
 
         System.out.println("Разность модулей");
-        System.out.println("f'|I1-I2| = " + (Math.abs(integralRes.get(0) - integralRes.get(1))));
-        System.out.println("f'|I2-I3| = " + (Math.abs(integralRes.get(1) - integralRes.get(2))));
+        System.out.println("|I1-I2| = " + (Math.abs(integralRes.get(0) - integralRes.get(1))));
+        System.out.println("|I2-I3| = " + (Math.abs(integralRes.get(1) - integralRes.get(2))));
+        System.out.println();
     }
 }

@@ -5,6 +5,8 @@ import lab5.Lab_5;
 import lab6.Lab_6;
 import lab7.Lab_7;
 import lab4.Lab_4;
+import lab7.Lab_7_additional;
+
 import java.util.*;
 
 
@@ -41,6 +43,8 @@ public class Main {
                 break;
             case 7:
                 Lab_7.monteKarlo();
+                Lab_7_additional.monteKarlo();
+                Lab_7_additional.res();
                 break;
         }
     }
