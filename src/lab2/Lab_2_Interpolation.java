@@ -1,6 +1,7 @@
 package lab2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Lab_2_Interpolation {
@@ -45,13 +46,8 @@ public class Lab_2_Interpolation {
     }
 
     private static List<Double> getValuesForSecondMethodOfNewton(Double[][] matrix) {
-        List<Double> list = new ArrayList<>();
 
-        for (int i = 0; i < matrix.length; i++) {
-            list.add(matrix[matrix.length - 1][i]);
-        }
-
-        return list;
+        return new ArrayList<>(Arrays.asList(matrix[matrix.length - 1]).subList(0, matrix.length));
     }
 
     public static Double getResultOfGaussFirstMethod(List<Double> ordValues, Double middleAbsValue, Double needValue, Double shift) {
