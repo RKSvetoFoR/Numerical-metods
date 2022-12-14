@@ -1,9 +1,10 @@
 import lab2.Lab_2;
-import lab1.lab_1;
+import lab1.Lab_1;
 import lab3.Lab_3;
 import lab5.Lab_5;
 import lab6.Lab_6;
-
+import lab7.Lab_7;
+import lab4.Lab_4;
 import java.util.*;
 
 
@@ -17,9 +18,9 @@ public class Main {
                 System.out.println("Если вы хотите использловать Интерполяционный многочлен Лагранжа нажмите 1,иначе нажмите 2");
                 int c = sc.nextInt();
                 if (c == 1) {
-                    lab_1.lagrang();
+                    Lab_1.lagrang();
                 } else {
-                    lab_1.aitken();
+                    Lab_1.aitken();
                 }
                 break;
             case 2:
@@ -28,12 +29,19 @@ public class Main {
             case 3:
                 Lab_3.splines();
                 break;
+            case 4:
+                Lab_4.leastSquares();
+                break;
             case 5:
                 Lab_5.trapez();
                 break;
             case 6:
                 Lab_6.gauss1();
                 Lab_6.gauss2();
+                break;
+            case 7:
+                Lab_7.monteKarlo();
+                break;
         }
     }
 }

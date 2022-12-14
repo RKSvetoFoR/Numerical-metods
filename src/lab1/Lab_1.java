@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static java.lang.Math.abs;
 
-public class lab_1 {
+public class Lab_1 {
     public static Object lagrang() {
         long start = System.currentTimeMillis();
         double[] xi = new double[]{1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0};
