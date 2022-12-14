@@ -119,7 +119,7 @@ public class Lab_2_Interpolation {
     private static Double[][] getMatrixOfFiniteDifferences(List<Double> ordValues) {
         int size = ordValues.size();
 
-        Double matrixOfFiniteDifferences[][] = new Double[size][size];
+        Double[][] matrixOfFiniteDifferences = new Double[size][size];
 
         for (int i = 0; i < size; i++) {
             matrixOfFiniteDifferences[i][0] = ordValues.get(i);

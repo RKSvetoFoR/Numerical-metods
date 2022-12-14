@@ -1,12 +1,11 @@
 package lab5;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Lab_5_res {
-    static @NotNull List<Double> res1() {
+    static  List<Double> res1() {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double eps = 0.00001;
@@ -24,7 +23,7 @@ public class Lab_5_res {
         return value;
     }
 
-    static @NotNull List<Double> res2() {
+    static  List<Double> res2() {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double I = 1;
@@ -42,7 +41,7 @@ public class Lab_5_res {
         return value;
     }
 
-    static @NotNull List<Double> res3() {
+    static  List<Double> res3() {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double I = 1;
@@ -60,7 +59,7 @@ public class Lab_5_res {
         return value;
     }
 
-    static @NotNull List<Double> res4() {
+    static  List<Double> res4() {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double I = 1;
@@ -78,7 +77,7 @@ public class Lab_5_res {
         return value;
     }
 
-    static @NotNull List<Double> res5() {
+    static  List<Double> res5() {
         List<Double> value = new ArrayList<>();
         int i = 0;
         double I = 1;

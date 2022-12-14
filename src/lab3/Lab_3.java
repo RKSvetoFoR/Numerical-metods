@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Lab_3 {
     public static void splines(){
-        double x[] = {0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
-        double y[] = {2, 2.105, 2.221, 2.349, 2.491, 2.648, 2.822, 3.013, 3.225, 3.459, 3.718};
+        double[] x = {0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1};
+        double[] y = {2, 2.105, 2.221, 2.349, 2.491, 2.648, 2.822, 3.013, 3.225, 3.459, 3.718};
         int N = 11;
         double[] a = new double[11];
         double[] b = new double[11];
@@ -13,7 +13,6 @@ public class Lab_3 {
         double[] c = new double[11];
         c[0] = 0;
         c[10] = 0;
-        double[][] A = new double[11][11];
         double hi = x[1] - x[0];
         double[] Fi = new double[N];
         double[] Ai = new double[N];
@@ -34,22 +33,21 @@ public class Lab_3 {
         alpha[1] = 0.0;
         beta[1] = 0.0;
         for (int i = 1; i < (N - 1); i++) {
-            alpha[i + 1] = Bi[i] / (-Ai[i] * alpha[i] + Ci[i]);
-            beta[i + 1] = (Fi[i] + Ai[i] * beta[i]) / (-Ai[i] * alpha[i] + Ci[i]);
+            double temp = -Ai[i] * alpha[i] + Ci[i];
+            alpha[i + 1] = Bi[i] / temp;
+            beta[i + 1] = (Fi[i] + Ai[i] * beta[i]) / temp;
         }
 
         for (int i = N - 2; i > 0; i--) {
             c[i] = alpha[i + 1] * c[i + 1] + beta[i + 1];
         }
-        for (int i = 0; i < N; i++) {
-            a[i] = y[i];
-        }
+        System.arraycopy(y, 0, a, 0, N);
         for (int i = 1; i < N; i++) {
             d[i] = (c[i] - c[i - 1]) / hi;
             b[i] = (hi / 2) * c[i] - (Math.pow(hi, 2) / 6) * d[i] + (y[i] - y[i - 1]) / hi;
         }
 
-        double h = 0.001, g = h;
+        double h = 0.001;
         int k = 1;
         ArrayList<Double> S = new ArrayList<>();
         for (double i = 0; i < 0.9; i += 0.1) {
@@ -66,8 +64,8 @@ public class Lab_3 {
             System.out.print(q + ",");
         }
         System.out.println(3);
-        for (int i = 0; i < S.size(); i++) {
-            System.out.print(S.get(i) + ",");
+        for (Double aDouble : S) {
+            System.out.print(aDouble + ",");
         }
     }
 }
