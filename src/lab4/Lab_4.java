@@ -1,14 +1,17 @@
 package lab4;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class Lab_4 {
-    static double[] xi = {0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1};
-    static double[] yi = {1, 0.9791, 0.9594, 0.9419, 0.9196, 0.9035, 0.8826, 0.8629, 0.8464, 0.8271, 0.811};
+
+    static final double[] xi = {0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1};
+    static final double[] yi = {1, 0.9791, 0.9594, 0.9419, 0.9196, 0.9035, 0.8826, 0.8629, 0.8464, 0.8271, 0.811};
 
     public static void leastSquares() {
         int n = xi.length;
-        int m= 2;
+        int m = 2;
         double[][] Ax = new double[xi.length][2];
         double[][] b = new double[xi.length][1];
         for (int i = 0; i < xi.length; i++) {
@@ -19,10 +22,17 @@ public class Lab_4 {
         double[][] AxT = Lab_4_MatrixOperation.Transposition(m, n, Ax);
         double[][] AxT_ = Lab_4_MatrixOperation.MatrixMultMatrix(AxT, Ax, m, n, m);
         double[][] b_ = Lab_4_MatrixOperation.MatrixMultMatrix(AxT, b, m, n, 1);
-        System.out.println(Arrays.toString(jacobi(AxT_, b_, m)));
+        double[] x_ = jacobi(AxT_, b_, m);
+        double[] y = new double[xi.length];
+        System.out.println(Arrays.toString(x_));
+        for (int i = 0; i < xi.length; i++) {
+            y[i] = xi[i]*x_[0] + x_[1];
+        }
+        System.out.println("Координаты x : " + Arrays.toString(xi));
+        System.out.println("Координаты y : " + Arrays.toString(y));
     }
 
-    public static double[] jacobi(double[][] A, double[][] B, int n) {
+    public static double @NotNull [] jacobi(double[][] A, double[][] B, int n) {
         double eps = 1e-6;
         double norm = 1000.0;
         double[][] LU = new double[n][n];
