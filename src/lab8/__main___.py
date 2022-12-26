@@ -6,7 +6,7 @@ from exact_solution import getX, exact_solution
 
 
 def main():
-    step_N = 100
+    step_N = 1000
 
     list_x = getX(step_N)
     list_y = exact_solution(list_x)
